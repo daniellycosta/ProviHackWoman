@@ -1,38 +1,27 @@
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Login } from "../App/Login";
 
 export function App() {
   return (
     <Router>
       <Switch>
         <Route path="/login">
-          <About />
+          <Login />
         </Route>
         <Route path="/criar/candidato">
-          <Users />
+          <Login />
         </Route>
         <Route path="/criar/empresa">
-          <Users />
+          <Login />
         </Route>
         <Route path="/">
-          <Home />
+          <Login />
         </Route>
       </Switch>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
 
 export default App;
