@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login } from "../components/Login";
 import { Cadastro } from "../components/Cadastro";
 import { CadastroEmpresa } from "../components/CadastroEmpresa"
-import { Desafio } from "../components/Desafio";
+import { CadastroDesafio } from "../components/CadastroDesafio";
 
 
 export function App() {
@@ -24,8 +24,8 @@ export function App() {
         <Route path="/criar/empresa">
           <Login />
         </Route>
-        <Route exact path="/Desafio">
-          <Desafio />
+        <Route exact path="/CadastroDesafio">
+          <CadastroDesafio />
         </Route>
         <Route path="/desafios/criar">
           <Login />
