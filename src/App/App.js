@@ -40,7 +40,7 @@ export function App() {
         <Route path="/desafios/:idDesafio">
           <>
             <MenuSuperior />
-            <Desafio />
+            <TelaDeDesafio />
           </>
         </Route>
         <Route exact path="/cadastro-candidato">
