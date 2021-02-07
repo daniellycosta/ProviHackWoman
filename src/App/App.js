@@ -16,7 +16,6 @@ import { Home } from "../components/Home";
 import { CadastroDesafio } from "../components/CadastroDesafio";
 import { CadastroProjeto } from "../components/CadastroProjeto";
 
-
 export function App() {
   return (
     <Router>
@@ -45,20 +44,18 @@ export function App() {
             <MenuSuperior />
             <Desafio />
           </>
+        </Route>
 
-       
         <Route exact path="/cadastro-candidato">
           <CadastroCandidato />
         </Route>
         <Route path="/cadastro-empresa">
           <CadastroEmpresa />
-
         </Route>
         <Route path="/cadastro-projeto">
           <CadastroProjeto />
         </Route>
-       
-    
+
         <Route exact path="/desafios">
           <>
             <MenuSuperior />
