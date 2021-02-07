@@ -2,6 +2,7 @@
   background-image: url("../../assets/images/computer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 .layer {
   background-color: rgb(116, 0, 184, 0.3);
