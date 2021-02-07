@@ -1,30 +1,24 @@
+import "./style.css";
+import logo from "../../assets/images/logo.png";
 import React from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import { Card, Container, Row, Col, Figure } from "react-bootstrap";
+import { LoginForm } from "./LoginForm";
 
 export const LoginComponent = (props) => {
   return (
-
-
-    <Container>
-      <h1>Olá, digite seu login e senha!</h1>
-      <br/>
-      <Form>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Control type="email" placeholder="Email" />
-        </Form.Group>
-
-        <Form.Group controlId="formBasicPassword">
-          <Form.Control type="password" placeholder="Senha" />
-        </Form.Group>
-        
-        <p> Não lembro a senha </p>
-
-        <Button variant="primary" type="submit">
-          Entrar
-        </Button>
-      </Form>
-      
-    </Container>
-
+    <div className="background">
+      <div className="layer">
+        <Container>
+          <Row className="justify-content-md-center h-100">
+            <Col md="auto col-sm-12 col">
+              <Card className="card  card-login">
+                <Figure.Image width={200} src={logo} className="logo" />
+                <LoginForm />
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </div>
   );
 };

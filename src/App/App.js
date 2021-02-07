@@ -2,6 +2,8 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Login } from "../components/Login";
+import { Desafios } from "../components/Desafios";
+import { Candidatos } from "../components/Candidatos";
 import { CadastroCandidato } from "../components/CadastroCandidato";
 import { CadastroEmpresa } from "../components/CadastroEmpresa"
 import { Desafio } from "../components/Desafio";
@@ -10,39 +12,36 @@ import { CadastroDesafio } from "../components/CadastroDesafio";
 import { CadastroProjeto } from "../components/CadastroProjeto";
 
 
+
 export function App() {
   return (
     <Router>
       <Switch>
-      <Route exact path="/">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/CadastroCandidato">
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/desafios">
+          <Desafios />
+        <Route exact path="/cadastro-candidato">
           <CadastroCandidato />
         </Route>
-        <Route exact path="/Home">
-          <Home />
-        </Route>
-        <Route path="/CadastroEmpresa">
+        <Route path="/cadastro-empresa">
           <CadastroEmpresa />
         </Route>
-        <Route path="/CadastroProjeto">
+        <Route path="/cadastro-projeto">
           <CadastroProjeto />
         </Route>
-        <Route exact path="/CadastroDesafio">
+        <Route exact path="/cadastro-desafio">
           <CadastroDesafio />
         </Route>
-        <Route path="/desafios/criar">
-          <Login />
-        </Route>
         <Route path="/desafios/:idDesafio">
-          <Login />
-        </Route>
-        <Route path="/desafio/submeter">
-          <Login />
+          <Desafio />
         </Route>
         <Route path="/candidatos">
-          <Login />
+          <Candidatos />
         </Route>
         <Route path="/candidatos/:idCandidato">
           <Login />
@@ -51,4 +50,5 @@ export function App() {
     </Router>
   );
 }
+
 export default App;
