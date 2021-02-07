@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Login } from "../components/Login";
 import { Cadastro } from "../components/Cadastro";
+import { Footer } from "../components/Footer";
 
 
 export function App() {
@@ -43,5 +44,4 @@ export function App() {
     </Router>
   );
 }
-
 export default App;
