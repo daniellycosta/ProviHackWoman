@@ -1,18 +1,9 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { MenuSuperior } from "../../common/MenuSuperior";
 import { Card } from "../../common/Card";
-import {
-  Jumbotron,
-  Container,
-  Form,
-  FormControl,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
-import { Search } from "react-bootstrap-icons";
+import { Container, Row, Col } from "react-bootstrap";
+import { Header } from "../../common/Header";
 import axios from "axios";
 
 export const DesafiosComponent = (props) => {
@@ -34,34 +25,18 @@ export const DesafiosComponent = (props) => {
 
   return (
     <>
-      <MenuSuperior />
-      <div className="banner">
-        <div className="layer">
-          <Jumbotron fluid className="jumbotron-cores jumbotron-padding">
-            <Container>
-              <h1>Desafios</h1>
-              <p>
-                Aqui você encontrará os desafios previamente cadastrados por
-                empresas para praticar, melhorar seu portifólio ou até mesmo
-                conseguir seu tão sonhado "sim!"
-              </p>
-            </Container>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Pesquisar"
-                className="margem-esquerda"
-              />
-              <Button className="margem-esquerda button-search">
-                <Search />
-              </Button>
-            </Form>
-          </Jumbotron>
-        </div>
+      <div className="banner-desafios">
+        <Header titulo="Desafios" comFiltro>
+          <p>
+            Aqui você encontrará os desafios previamente cadastrados por
+            empresas para praticar, melhorar seu portifólio ou até mesmo
+            conseguir seu tão sonhado "sim!"
+          </p>
+        </Header>
       </div>
       <Container fluid>
         <Row className="row-margin">
-          {desafios.map(({ id, titulo, empresa, descricao }) => (
+          {desafios.map(({ id, titulo, empresa, descricao, tags }) => (
             <Col xs={12} md={6} className="col-margin">
               <Card
                 key={id}
@@ -72,6 +47,7 @@ export const DesafiosComponent = (props) => {
                   titulo,
                   descricao,
                   subtitulo: `Empresa: ${empresa}`,
+                  tags,
                 }}
               />
             </Col>
