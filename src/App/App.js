@@ -1,13 +1,16 @@
-import "./App.css";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import { Login } from "../components/Login";
-import { CadastroCandidato } from "../components/CadastroCandidato";
-import { Cadastro } from "../components/Cadastro";
-import { CadastroEmpresa } from "../components/CadastroEmpresa"
 import { Desafio } from "../components/Desafio";
-import { Home } from "../components/Home"
+import { Desafios } from "../components/Desafios";
+import { Candidatos } from "../components/Candidatos";
+import { Cadastro } from "../components/Cadastro";
+import { CadastroEmpresa } from "../components/CadastroEmpresa";
 import { CadastroDesafio } from "../components/CadastroDesafio";
+import { MenuSuperior } from "../common/MenuSuperior";
+import { CadastroCandidato } from "../components/CadastroCandidato";
+import { Home } from "../components/Home";
+import { CadastroProjeto } from "../components/CadastroProjeto";
 import { TelaDeDesafio } from "../components/TelaDeDesafio";
 
 
@@ -18,45 +21,58 @@ export function App() {
         <Route exact path="/">
           <Home />
         </Route>
-
-        <Route exact path="/CadastroCandidato">
-          <CadastroCandidato />
+        <Route exact path="/login">
+          <Login />
         </Route>
 
-        <Route exact path="/Home">
-          <Home />
+        <Route exact path="/cadastro">
+          <Cadastro />
         </Route>
-
-        <Route path="/CadastroEmpresa">
+        <Route exact path="/cadastro-empresa">
           <CadastroEmpresa />
         </Route>
-
-        <Route path="/criar/empresa">
-          <Login />
+        <Route exact path="/cadastro-desafio">
+          <>
+            <MenuSuperior />
+            <CadastroDesafio />
+          </>
         </Route>
-
-        <Route exact path="/CadastroDesafio">
-          <CadastroDesafio />
-        </Route>
-
-        <Route path="/desafios/criar">
-          <Login />
-        </Route>
-
         <Route path="/desafios/:idDesafio">
-          <Login />
+          <>
+            <MenuSuperior />
+            <Desafio />
+          </>
         </Route>
-
-        <Route path="/TelaDeDesafio">
-          <TelaDeDesafio />
+        <Route exact path="/cadastro-candidato">
+          <CadastroCandidato />
         </Route>
-
-        <Route path="/candidatos">
-          <Login />
+        <Route path="/cadastro-empresa">
+          <CadastroEmpresa />
+        </Route>
+        <Route path="/cadastro-projeto/:idDesafio/">
+          <>
+            <MenuSuperior />
+            <CadastroProjeto />
+          </>
+        </Route>
+        <Route exact path="/desafios">
+          <>
+            <MenuSuperior />
+            <Desafios />
+          </>
+        </Route>
+        <Route exact path="/candidatos">
+          <>
+            <MenuSuperior />
+            <Candidatos />
+          </>
         </Route>
 
         <Route path="/candidatos/:idCandidato">
-          <Login />
+          <>
+            <MenuSuperior />
+            <Login />
+          </>
         </Route>
 
       </Switch>

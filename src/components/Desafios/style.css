@@ -1,0 +1,44 @@
+.banner-desafios {
+  background-image: url("../../assets/images/desafios-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.layer {
+  background: rgb(116, 0, 184);
+  background: linear-gradient(
+    180deg,
+    rgba(116, 0, 184, 0.8) 0%,
+    rgba(139, 0, 191, 0.8) 50%,
+    rgba(154, 0, 197, 0.8) 100%
+  );
+  width: 100%;
+  height: 100%;
+}
+.jumbotron-cores {
+  color: #ffff;
+  background-color: transparent !important;
+}
+.jumbotron-padding {
+  padding: 20px 10px 0px 20px !important;
+}
+.margem-esquerda {
+  margin-left: 10px;
+}
+
+.button-search {
+  color: #48bfe3 !important;
+  background-color: transparent !important;
+  border-color: #48bfe3 !important;
+}
+.button-search:hover {
+  color: #ffff !important;
+  background-color: #48bfe3 !important;
+  border-color: #48bfe3 !important;
+}
+
+.row-margin {
+  margin: 25px 0px;
+}
+.col-margin {
+  margin: 5px 0px;
+}
