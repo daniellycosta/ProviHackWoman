@@ -1,9 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { Login } from "../Login";
-import { Desafios } from "../Desafios";
-import { Candidatos } from "../Candidatos";
+import { Login } from "../components/Login";
+import { Desafios } from "../components/Desafios";
+import { Candidatos } from "../components/Candidatos";
 
 export function App() {
   return (
