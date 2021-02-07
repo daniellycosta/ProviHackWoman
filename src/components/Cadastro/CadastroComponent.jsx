@@ -11,7 +11,7 @@ export const CadastroComponent = (props) => {
 
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Sobrenome </Form.Label>
-    <Form.Control type="email" placeholder="Sobrenome" />
+    <Form.Control type="text" placeholder="Sobrenome" />
   </Form.Group>
 
   <Form.Group controlId="formBasicEmail">
@@ -28,11 +28,6 @@ export const CadastroComponent = (props) => {
     Enviar
   </Button>
 </Form>
-    
-
-    
-
-
 
   );
 };
