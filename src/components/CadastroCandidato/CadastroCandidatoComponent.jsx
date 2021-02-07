@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, Dropdown, Jumbotron, Container } from "react-bootstrap";
 
-export const CadastroComponent = (props) => {
+export const CadastroCandidatoComponent = (props) => {
   return (
   <Container>
     <Jumbotron>
