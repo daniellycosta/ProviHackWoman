@@ -1,3 +1,4 @@
+
 import "./style.css";
 import React, { useState } from "react";
 import { Form, Container, Jumbotron, Button } from "react-bootstrap";
@@ -59,10 +60,12 @@ export const CadastroDesafioComponent = (props) => {
                 type="input"
                 onChange={(event) => setEmpresa(event.target.value)}
               />
+
             </Form.Group>
 
             <Form.Group controlId="nomeDesafio">
               <Form.Label>Título* </Form.Label>
+
               <Form.Control
                 type="input"
                 value={titulo}
@@ -72,6 +75,7 @@ export const CadastroDesafioComponent = (props) => {
 
             <Form.Group controlId="textoDesafio">
               <Form.Label>Descrição*</Form.Label>
+
               <Form.Control
                 as="textarea"
                 rows={3}
@@ -96,5 +100,6 @@ export const CadastroDesafioComponent = (props) => {
         </Jumbotron>
       </Container>
     </>
+
   );
 };
