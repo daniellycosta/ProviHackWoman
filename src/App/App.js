@@ -4,16 +4,12 @@ import { Login } from "../components/Login";
 import { Desafio } from "../components/Desafio";
 import { Desafios } from "../components/Desafios";
 import { Candidatos } from "../components/Candidatos";
-
 import { Cadastro } from "../components/Cadastro";
 import { CadastroEmpresa } from "../components/CadastroEmpresa";
 import { CadastroDesafio } from "../components/CadastroDesafio";
 import { MenuSuperior } from "../common/MenuSuperior";
 import { CadastroCandidato } from "../components/CadastroCandidato";
-import { CadastroEmpresa } from "../components/CadastroEmpresa";
-import { Desafio } from "../components/Desafio";
 import { Home } from "../components/Home";
-import { CadastroDesafio } from "../components/CadastroDesafio";
 import { CadastroProjeto } from "../components/CadastroProjeto";
 
 export function App() {
