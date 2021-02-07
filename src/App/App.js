@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Login } from "../components/Login";
 import { Cadastro } from "../components/Cadastro";
+import { CadastroEmpresa } from "../components/CadastroEmpresa"
 
 
 export function App() {
@@ -15,8 +16,8 @@ export function App() {
         <Route exact path="/Cadastro">
           <Cadastro />
         </Route>
-        <Route path="/criar/candidato">
-          <Login />
+        <Route path="/CadastroEmpresa">
+          <CadastroEmpresa />
         </Route>
         <Route path="/criar/empresa">
           <Login />
