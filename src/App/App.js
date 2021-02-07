@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Login } from "../components/Login";
 import { CadastroCandidato } from "../components/CadastroCandidato";
-//import { Cadastro } from "../components/Cadastro";
+import { Cadastro } from "../components/Cadastro";
 import { CadastroEmpresa } from "../components/CadastroEmpresa"
 import { Desafio } from "../components/Desafio";
 import { Home } from "../components/Home"
