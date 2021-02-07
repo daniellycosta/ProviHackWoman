@@ -4,6 +4,8 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 
 export const MenuSuperiorComponent = (props) => {
+  const permissao = localStorage.getItem("permissaoMock");
+
   return (
     <Navbar variant="dark" className="navbar">
       <Navbar.Brand href="#home">
@@ -16,9 +18,12 @@ export const MenuSuperiorComponent = (props) => {
         TrampoTech
       </Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#features">Meus Desafios</Nav.Link>
-        <Nav.Link href="#pricing">Perfil</Nav.Link>
+        <Nav.Link href={permissao === "empresa" ? "/candidatos" : "/desafios"}>
+          Home
+        </Nav.Link>
+        {permissao === "empresa" && (
+          <Nav.Link href={"/cadastro-desafio"}>Cadastrar Desafios</Nav.Link>
+        )}
       </Nav>
       <Nav>
         <Nav.Link href="/login">Logout</Nav.Link>

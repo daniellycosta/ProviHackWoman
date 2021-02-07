@@ -1,31 +1,48 @@
 import "./style.css";
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 export const LoginFormComponent = (props) => {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
   const history = useHistory();
 
-  const logar = (event) => {
+  const simularLogin = (event) => {
     event.preventDefault();
-    history.push("/desafios");
+    localStorage.setItem("permissaoMock", "");
+    if (email.includes("empresa")) {
+      localStorage.setItem("permissaoMock", "empresa");
+      history.push("/candidatos");
+    } else {
+      localStorage.setItem("permissaoMock", "candidato");
+      history.push("/desafios");
+    }
   };
 
   return (
     <Form>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control
+          type="email"
+          placeholder="Enter email"
+          onChange={(event) => setEmail(event.target.value)}
+        />
       </Form.Group>
       <Form.Group controlId="formBasicPassword">
         <Form.Label>Senha</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Control
+          type="password"
+          placeholder="Password"
+          onChange={(event) => setSenha(event.target.value)}
+        />
       </Form.Group>
       <Button
         variant="primary"
         type="submit"
         className="botao-login"
-        onClick={logar}
+        onClick={simularLogin}
       >
         Entrar
       </Button>

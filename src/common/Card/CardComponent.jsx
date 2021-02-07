@@ -6,8 +6,9 @@ import { Card, Row, Col, Image, Badge } from "react-bootstrap";
 import { simularTags } from "../../utils/simularTags";
 
 export const CardComponent = (props) => {
-  const { titulo, subtitulo, descricao, avatar } = props.dados;
-  const tags = simularTags();
+  const { titulo, subtitulo, descricao, avatar, tags } = props.dados;
+
+  const badges = tags && tags.length ? tags : simularTags();
 
   const getBadgeClasses = (tag) => {
     switch (tag) {
@@ -22,7 +23,7 @@ export const CardComponent = (props) => {
 
   const getImagem = () => {
     if (avatar) return avatar;
-    else return tags.includes("UI/UX") ? logoArt : logoCode;
+    else return badges.includes("UI/UX") ? logoArt : logoCode;
   };
 
   return (
@@ -38,9 +39,9 @@ export const CardComponent = (props) => {
               <Col md="auto">
                 <Card.Title className="card-titulo">{titulo}</Card.Title>
               </Col>
-              <Col xs lg={8}>
+              <Col xs lg={2}>
                 <Row>
-                  {tags.map((tag, i) => {
+                  {badges.map((tag, i) => {
                     return (
                       <Badge
                         key={i}

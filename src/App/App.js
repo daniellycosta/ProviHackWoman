@@ -1,36 +1,61 @@
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login } from "../components/Login";
+import { Desafio } from "../components/Desafio";
 import { Desafios } from "../components/Desafios";
 import { Candidatos } from "../components/Candidatos";
 import { Cadastro } from "../components/Cadastro";
-import { CadastroEmpresa } from "../components/CadastroEmpresa"
+import { CadastroEmpresa } from "../components/CadastroEmpresa";
 import { CadastroDesafio } from "../components/CadastroDesafio";
+
+import { MenuSuperior } from "../common/MenuSuperior";
+
 export function App() {
   return (
     <Router>
       <Switch>
-      <Route exact path="/">
+        <Route exact path="/">
           <Login />
         </Route>
-        <Route exact path="/Cadastro">
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/cadastro">
           <Cadastro />
         </Route>
-        <Route path="/CadastroEmpresa">
+        <Route exact path="/cadastro-empresa">
           <CadastroEmpresa />
         </Route>
-        <Route exact path="/CadastroDesafio">
-          <CadastroDesafio />
+        <Route exact path="/cadastro-desafio">
+          <>
+            <MenuSuperior />
+            <CadastroDesafio />
+          </>
         </Route>
         <Route path="/desafios/:idDesafio">
-          <Login />
+          <>
+            <MenuSuperior />
+            <Desafio />
+          </>
         </Route>
         <Route path="/desafio/submeter">
           <Login />
         </Route>
-        <Route path="/candidatos">
-          <Candidatos />
+        <Route exact path="/desafios">
+          <>
+            <MenuSuperior /> <Desafios />
+          </>
+        </Route>
+        <Route exact path="/candidatos">
+          <>
+            <MenuSuperior /> <Candidatos />
+          </>
         </Route>
         <Route path="/candidatos/:idCandidato">
-          <Login />
+          <>
+            <MenuSuperior />
+            <Login />
+          </>
         </Route>
       </Switch>
     </Router>

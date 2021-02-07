@@ -1,5 +1,4 @@
-.banner-candidatos {
-  background-image: url("../../assets/images/candidatos-banner.jpg");
+.banner-geral {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -36,9 +35,8 @@
   border-color: #48bfe3 !important;
 }
 
-.row-margin {
-  margin: 25px 0px;
-}
-.col-margin {
-  margin: 5px 0px;
+.select-multiplo {
+  color: black !important;
+  width: 300px !important;
+  margin-left: 5px !important;
 }
