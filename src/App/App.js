@@ -4,34 +4,41 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login } from "../components/Login";
 import { Desafios } from "../components/Desafios";
 import { Candidatos } from "../components/Candidatos";
+import { CadastroCandidato } from "../components/CadastroCandidato";
+import { CadastroEmpresa } from "../components/CadastroEmpresa"
+import { Desafio } from "../components/Desafio";
+import { Home } from "../components/Home"
+import { CadastroDesafio } from "../components/CadastroDesafio";
+import { CadastroProjeto } from "../components/CadastroProjeto";
+
+
 
 export function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <Login />
+          <Home />
         </Route>
         <Route path="/login">
           <Login />
         </Route>
-        <Route path="/criar/candidato">
-          <Login />
-        </Route>
-        <Route path="/criar/empresa">
-          <Login />
-        </Route>
         <Route path="/desafios">
           <Desafios />
+        <Route exact path="/cadastro-candidato">
+          <CadastroCandidato />
         </Route>
-        <Route path="/desafios/criar">
-          <Login />
+        <Route path="/cadastro-empresa">
+          <CadastroEmpresa />
+        </Route>
+        <Route path="/cadastro-projeto">
+          <CadastroProjeto />
+        </Route>
+        <Route exact path="/cadastro-desafio">
+          <CadastroDesafio />
         </Route>
         <Route path="/desafios/:idDesafio">
-          <Login />
-        </Route>
-        <Route path="/desafio/submeter">
-          <Login />
+          <Desafio />
         </Route>
         <Route path="/candidatos">
           <Candidatos />
