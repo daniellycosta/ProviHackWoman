@@ -11,6 +11,8 @@ import { MenuSuperior } from "../common/MenuSuperior";
 import { CadastroCandidato } from "../components/CadastroCandidato";
 import { Home } from "../components/Home";
 import { CadastroProjeto } from "../components/CadastroProjeto";
+import { TelaDeDesafio } from "../components/TelaDeDesafio";
+
 
 export function App() {
   return (
@@ -65,14 +67,19 @@ export function App() {
             <Candidatos />
           </>
         </Route>
+
         <Route path="/candidatos/:idCandidato">
           <>
             <MenuSuperior />
             <Login />
           </>
         </Route>
+
       </Switch>
+
     </Router>
+
+
   );
 }
 export default App;
