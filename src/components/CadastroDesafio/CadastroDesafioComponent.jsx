@@ -3,7 +3,7 @@ import { Form, FormControl, Container, Jumbotron, Button } from "react-bootstrap
 
 export const CadastroDesafioComponent = (props) => {
   return (
-    <div>
+    
 
       <Container>
         <h1>Cadastro de desafio</h1>
@@ -44,7 +44,7 @@ export const CadastroDesafioComponent = (props) => {
         </Jumbotron>
       </Container>
 
-    </div>
+  
 
 
 
