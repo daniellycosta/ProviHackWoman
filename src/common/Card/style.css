@@ -1,0 +1,34 @@
+.card-hover {
+  height: 100%;
+}
+
+.card-hover:hover {
+  cursor: pointer;
+  background-color: rgba(72, 191, 227, 0.1);
+}
+
+.row-titulo {
+  margin-bottom: 15px;
+}
+
+.card-titulo {
+  margin-bottom: 0px !important;
+}
+
+.badge-espacamento {
+  color: #ffff !important;
+  margin: 0px 2px;
+}
+
+.front {
+  background-color: #48bfe3 !important;
+}
+
+.back {
+  color: #ffff !important;
+  background-color: #e34a70 !important;
+}
+
+.ui {
+  background-color: #e3bf4a !important;
+}

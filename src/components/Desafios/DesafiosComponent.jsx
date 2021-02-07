@@ -1,18 +1,22 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { MenuSuperior } from "../../common/MenuSuperior";
+import { Card } from "../../common/Card";
 import {
   Jumbotron,
   Container,
-  Card,
   Form,
   FormControl,
   Button,
+  Row,
+  Col,
 } from "react-bootstrap";
-import { Search } from "react-bootstrap-icons";
+import { Columns, Search } from "react-bootstrap-icons";
 import axios from "axios";
 
 export const DesafiosComponent = (props) => {
+  const history = useHistory();
   const [desafios, setDesafios] = useState([]);
 
   const getDesafios = async () => {
@@ -55,19 +59,25 @@ export const DesafiosComponent = (props) => {
           </Jumbotron>
         </div>
       </div>
-      {desafios.map((desafio) => (
-        <Card style={{ width: "100%", margin: "10px" }} key={desafio.id}>
-          <Card.Body>
-            <Card.Title>{desafio.titulo}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              {desafio.empresa}
-            </Card.Subtitle>
-            <Card.Text>{desafio.descricao}</Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
-          </Card.Body>
-        </Card>
-      ))}
+      <Container fluid>
+        <Row className="row-margin">
+          {desafios.map(({ id, titulo, empresa, descricao }) => (
+            <Col xs={12} md={6} className="col-margin">
+              <Card
+                key={id}
+                onClick={() => {
+                  history.push(`/desafio/${id}`);
+                }}
+                dados={{
+                  titulo,
+                  descricao,
+                  subtitulo: `Empresa: ${empresa}`,
+                }}
+              />
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </>
   );
 };

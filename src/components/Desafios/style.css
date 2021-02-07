@@ -35,3 +35,10 @@
   background-color: #48bfe3 !important;
   border-color: #48bfe3 !important;
 }
+
+.row-margin {
+  margin: 25px 0px;
+}
+.col-margin {
+  margin: 5px 0px;
+}
