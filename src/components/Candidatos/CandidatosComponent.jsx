@@ -73,7 +73,7 @@ export const CandidatosComponent = (props) => {
                   <Card
                     key={id}
                     onClick={() => {
-                      history.push(`/desafio/${id}`);
+                      history.push(`/candidato/${id}`);
                     }}
                     dados={{
                       avatar,
