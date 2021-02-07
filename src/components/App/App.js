@@ -2,12 +2,13 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Login } from "../Login";
+import { Desafios } from "../Desafios";
 
 export function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Login />
         </Route>
         <Route path="/login">
@@ -20,7 +21,7 @@ export function App() {
           <Login />
         </Route>
         <Route path="/desafios">
-          <Login />
+          <Desafios />
         </Route>
         <Route path="/desafios/criar">
           <Login />

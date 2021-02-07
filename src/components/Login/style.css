@@ -1,0 +1,24 @@
+.background {
+  background-image: url("../../assets/images/computer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.layer {
+  background-color: rgb(116, 0, 184, 0.3);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+}
+.card-login {
+  padding: 0px 50px 20px 50px;
+  box-shadow: 5px 10px 18px #272626;
+}
+.col {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.logo {
+  align-self: center;
+}

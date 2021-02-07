@@ -1,0 +1,12 @@
+.botao-login {
+  width: 100%;
+  background-color: #7400b8 !important;
+  border-color: #7400b8 !important;
+}
+.sem-conta-container {
+  margin-top: 20px;
+  display: flex;
+}
+p {
+  margin-right: 5px;
+}
