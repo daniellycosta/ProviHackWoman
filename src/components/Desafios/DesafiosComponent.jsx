@@ -25,15 +25,14 @@ export const DesafiosComponent = (props) => {
 
   return (
     <>
-      <div className="banner-desafios">
-        <Header titulo="Desafios" comFiltro>
-          <p>
-            Aqui você encontrará os desafios previamente cadastrados por
-            empresas para praticar, melhorar seu portifólio ou até mesmo
-            conseguir seu tão sonhado "sim!"
-          </p>
-        </Header>
-      </div>
+      <Header titulo="Desafios" bannerClass="banner-desafios" comFiltro>
+        <p>
+          Aqui você encontrará os desafios previamente cadastrados por empresas
+          para praticar, melhorar seu portifólio ou até mesmo conseguir seu tão
+          sonhado "sim!"
+        </p>
+      </Header>
+
       <Container fluid>
         <Row className="row-margin">
           {desafios.map(({ id, titulo, empresa, descricao, tags }) => (

@@ -41,17 +41,18 @@ export function App() {
             <Desafio />
           </>
         </Route>
-
         <Route exact path="/cadastro-candidato">
           <CadastroCandidato />
         </Route>
         <Route path="/cadastro-empresa">
           <CadastroEmpresa />
         </Route>
-        <Route path="/cadastro-projeto">
-          <CadastroProjeto />
+        <Route path="/cadastro-projeto/:idDesafio/">
+          <>
+            <MenuSuperior />
+            <CadastroProjeto />
+          </>
         </Route>
-
         <Route exact path="/desafios">
           <>
             <MenuSuperior />
