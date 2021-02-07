@@ -13,12 +13,12 @@ export const FooterComponent = (props) => {
           <li>
             Contato
              </li>
-        
 
-  
+
+
           <li>
-            teste
-             </li>
+
+          </li>
         </ul>
       </div>
 
