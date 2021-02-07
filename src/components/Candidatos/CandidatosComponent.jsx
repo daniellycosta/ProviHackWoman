@@ -13,16 +13,17 @@ import {
   Col,
 } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
+import { simularAvatar } from "../../utils/simularAvatar";
 import axios from "axios";
 
-export const DesafiosComponent = (props) => {
+export const CandidatosComponent = (props) => {
   const history = useHistory();
   const [desafios, setDesafios] = useState([]);
 
   const getDesafios = async () => {
     try {
       const response = await axios.get(
-        "https://601f1a0db5a0e9001706a2c9.mockapi.io/api/desafios"
+        "https://601f1a0db5a0e9001706a2c9.mockapi.io/api/users"
       );
       setDesafios(response.data);
     } catch (error) {
@@ -39,11 +40,14 @@ export const DesafiosComponent = (props) => {
         <div className="layer">
           <Jumbotron fluid className="jumbotron-cores jumbotron-padding">
             <Container>
-              <h1>Desafios</h1>
+              <h1>Candidatos</h1>
               <p>
-                Aqui você encontrará os desafios previamente cadastrados por
-                empresas para praticar, melhorar seu portifólio ou até mesmo
-                conseguir seu tão sonhado "sim!"
+                Aqui você encontrará os candidatos cadastrados na plataforma.
+                Clicando neles é possível ver quais desafios eles responderam.
+              </p>
+              <p>
+                É possível ainda ver apenas os que responderam a desafios
+                cadastrados pela sua empresa
               </p>
             </Container>
             <Form inline>
@@ -61,21 +65,27 @@ export const DesafiosComponent = (props) => {
       </div>
       <Container fluid>
         <Row className="row-margin">
-          {desafios.map(({ id, titulo, empresa, descricao }) => (
-            <Col xs={12} md={6} className="col-margin">
-              <Card
-                key={id}
-                onClick={() => {
-                  history.push(`/desafio/${id}`);
-                }}
-                dados={{
-                  titulo,
-                  descricao,
-                  subtitulo: `Empresa: ${empresa}`,
-                }}
-              />
-            </Col>
-          ))}
+          {desafios.map(
+            ({ id, nome, sobrenome, email, linkedin, portifolio }) => {
+              const avatar = simularAvatar(id);
+              return (
+                <Col xs={12} md={6} className="col-margin">
+                  <Card
+                    key={id}
+                    onClick={() => {
+                      history.push(`/desafio/${id}`);
+                    }}
+                    dados={{
+                      avatar,
+                      titulo: `${nome} ${sobrenome}`,
+                      descricao: `• Linkedin: ${linkedin} • Portifólio: ${portifolio}`,
+                      subtitulo: `Email: ${email}`,
+                    }}
+                  />
+                </Col>
+              );
+            }
+          )}
         </Row>
       </Container>
     </>

@@ -6,7 +6,7 @@ import { Card, Row, Col, Image, Badge } from "react-bootstrap";
 import { simularTags } from "../../utils/simularTags";
 
 export const CardComponent = (props) => {
-  const { titulo, subtitulo, descricao } = props.dados;
+  const { titulo, subtitulo, descricao, avatar } = props.dados;
   const tags = simularTags();
 
   const getBadgeClasses = (tag) => {
@@ -20,17 +20,17 @@ export const CardComponent = (props) => {
     }
   };
 
+  const getImagem = () => {
+    if (avatar) return avatar;
+    else return tags.includes("UI/UX") ? logoArt : logoCode;
+  };
+
   return (
     <Card className="card-hover" onClick={props.onClick}>
       <Card.Body>
         <Row>
           <Col xs={12} sm={4} md={2}>
-            <Image
-              src={tags.includes("UI/UX") ? logoArt : logoCode}
-              width={100}
-              height={100}
-              roundedCircle
-            />
+            <Image src={getImagem()} width={100} height={100} roundedCircle />
           </Col>
 
           <Col xs={12} sm={8} md={10}>
@@ -64,10 +64,3 @@ export const CardComponent = (props) => {
     </Card>
   );
 };
-
-{
-  /*<Badge variant="success">Novo</Badge>
-                  <Badge className="badge-espacamento front">Front</Badge>
-                  <Badge className="badge-espacamento back">Back</Badge>
-<Badge className="badge-espacamento ui">UI/UX</Badge>*/
-}

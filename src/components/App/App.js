@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Login } from "../Login";
 import { Desafios } from "../Desafios";
+import { Candidatos } from "../Candidatos";
 
 export function App() {
   return (
@@ -33,7 +34,7 @@ export function App() {
           <Login />
         </Route>
         <Route path="/candidatos">
-          <Login />
+          <Candidatos />
         </Route>
         <Route path="/candidatos/:idCandidato">
           <Login />
