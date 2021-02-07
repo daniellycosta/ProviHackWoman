@@ -1,31 +1,24 @@
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import { Login } from "../components/Login";
 import { Desafios } from "../components/Desafios";
 import { Candidatos } from "../components/Candidatos";
-
+import { Cadastro } from "../components/Cadastro";
+import { CadastroEmpresa } from "../components/CadastroEmpresa"
+import { CadastroDesafio } from "../components/CadastroDesafio";
 export function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+      <Route exact path="/">
           <Login />
         </Route>
-        <Route path="/login">
-          <Login />
+        <Route exact path="/Cadastro">
+          <Cadastro />
         </Route>
-        <Route path="/criar/candidato">
-          <Login />
+        <Route path="/CadastroEmpresa">
+          <CadastroEmpresa />
         </Route>
-        <Route path="/criar/empresa">
-          <Login />
-        </Route>
-        <Route path="/desafios">
-          <Desafios />
-        </Route>
-        <Route path="/desafios/criar">
-          <Login />
+        <Route exact path="/CadastroDesafio">
+          <CadastroDesafio />
         </Route>
         <Route path="/desafios/:idDesafio">
           <Login />
@@ -43,5 +36,4 @@ export function App() {
     </Router>
   );
 }
-
 export default App;
