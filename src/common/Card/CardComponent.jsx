@@ -42,7 +42,9 @@ export const CardComponent = (props) => {
               <Col xs lg={2}>
                 <Row>
                   {badges.map((tag, i) => {
-                    return (
+                    return props.semNovo && tag === "Novo" ? (
+                      ""
+                    ) : (
                       <Badge
                         key={i}
                         variant={tag === "Novo" ? "success" : false}
