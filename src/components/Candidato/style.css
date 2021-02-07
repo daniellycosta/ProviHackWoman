@@ -1,0 +1,19 @@
+.coluna-imagem {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.button-enviar {
+  color: #48bfe3 !important;
+  background-color: transparent !important;
+  border-color: #48bfe3 !important;
+  margin-top: 25px;
+  width: 300px;
+  position: relative;
+}
+.button-enviar:hover {
+  color: #ffff !important;
+  background-color: #48bfe3 !important;
+  border-color: #48bfe3 !important;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login } from "../components/Login";
 import { Desafio } from "../components/Desafio";
+import { Candidato } from "../components/Candidato";
 import { Desafios } from "../components/Desafios";
 import { Candidatos } from "../components/Candidatos";
 import { Cadastro } from "../components/Cadastro";
@@ -71,7 +72,7 @@ export function App() {
         <Route path="/candidatos/:idCandidato">
           <>
             <MenuSuperior />
-            <Login />
+            <Candidato />
           </>
         </Route>
 
