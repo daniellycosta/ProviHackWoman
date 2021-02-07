@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login } from "../components/Login";
 import { Cadastro } from "../components/Cadastro";
 import { CadastroEmpresa } from "../components/CadastroEmpresa"
+import { Desafio } from "../components/Desafio";
+import { Home } from "../components/Home"
 import { CadastroDesafio } from "../components/CadastroDesafio";
 
 
@@ -14,10 +16,12 @@ export function App() {
       <Route exact path="/">
           <Login />
         </Route>
+        <Route exact path="/Home">
+          <Home />
+        </Route>
         <Route exact path="/Cadastro">
           <Cadastro />
         </Route>
-
         <Route path="/CadastroEmpresa">
           <CadastroEmpresa />
         </Route>
