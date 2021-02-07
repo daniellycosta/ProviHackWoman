@@ -1,17 +1,19 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { Login } from "../Login";
+import { Login } from "../components/Login";
+import { Cadastro } from "../components/Cadastro";
+
 
 export function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+      <Route exact path="/">
           <Login />
         </Route>
-        <Route path="/login">
-          <Login />
+        <Route exact path="/Cadastro">
+          <Cadastro />
         </Route>
         <Route path="/criar/candidato">
           <Login />
