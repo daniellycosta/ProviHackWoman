@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Login } from "../components/Login";
+import { CadastroCandidato } from "../components/CadastroCandidato";
 import { Cadastro } from "../components/Cadastro";
 import { CadastroEmpresa } from "../components/CadastroEmpresa"
 import { Desafio } from "../components/Desafio";
@@ -16,6 +17,8 @@ export function App() {
       <Route exact path="/">
           <Login />
         </Route>
+        <Route exact path="/CadastroCandidato">
+          <CadastroCandidato />
         <Route exact path="/Home">
           <Home />
         </Route>
