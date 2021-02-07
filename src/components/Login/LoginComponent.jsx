@@ -1,17 +1,30 @@
 import React from "react";
-import { Jumbotron, Button } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 
 export const LoginComponent = (props) => {
   return (
-    <Jumbotron fluid>
-      <h1>Hello, world!</h1>
-      <p>
-        This is a simple hero unit, a simple jumbotron-style component for
-        calling extra attention to featured content or information.
-      </p>
-      <p>
-        <Button variant="primary">Learn more</Button>
-      </p>
-    </Jumbotron>
+
+
+    <Container>
+      <h1>Olá, digite seu login e senha!</h1>
+      <br/>
+      <Form>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Control type="email" placeholder="Email" />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicPassword">
+          <Form.Control type="password" placeholder="Senha" />
+        </Form.Group>
+        
+        <p> Não lembro a senha </p>
+
+        <Button variant="primary" type="submit">
+          Entrar
+        </Button>
+      </Form>
+      
+    </Container>
+
   );
 };
