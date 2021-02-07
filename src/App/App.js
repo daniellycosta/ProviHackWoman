@@ -15,7 +15,7 @@ export function App() {
     <Router>
       <Switch>
       <Route exact path="/">
-          <Login />
+          <Home />
         </Route>
         <Route exact path="/CadastroCandidato">
           <CadastroCandidato />
