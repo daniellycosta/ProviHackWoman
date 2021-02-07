@@ -29,7 +29,7 @@ export const CardComponent = (props) => {
   return (
     <Card className="card-hover" onClick={props.onClick}>
       <Card.Body>
-        <Row>
+        <Row className="justify-content-md-center">
           <Col xs={12} sm={4} md={2}>
             <Image src={getImagem()} width={100} height={100} roundedCircle />
           </Col>
