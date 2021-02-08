@@ -34,17 +34,17 @@ A TrampoTech é uma plataforma para auxiliar profissionais de início de carreir
  # Contribuição:
   
  # Desenvolvedoras:
-  Alyne Silva
-  Danielly Costa
-  Luana Pereira
+  - Alyne Silva
+  - Danielly Costa
+  - Luana Pereira
   
  # UX:
-  Eli Alves Leandro
+  - Eli Alves Leandro
   
  # Análista de négocios em TI:
-  Jéssica Pimentel
+  - Jéssica Pimentel
   
  # ADM - Dados:
-  Luciana L Menges
+  - Luciana L Menges
 
 Repositório criado para o hackathon da Provi
