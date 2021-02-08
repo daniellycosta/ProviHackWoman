@@ -1,3 +1,9 @@
+.coluna-imagem {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 .button-enviar {
   color: #48bfe3 !important;
   background-color: transparent !important;

@@ -29,7 +29,7 @@ export const CardComponent = (props) => {
   return (
     <Card className="card-hover" onClick={props.onClick}>
       <Card.Body>
-        <Row>
+        <Row className="justify-content-md-center">
           <Col xs={12} sm={4} md={2}>
             <Image src={getImagem()} width={100} height={100} roundedCircle />
           </Col>
@@ -42,7 +42,9 @@ export const CardComponent = (props) => {
               <Col xs lg={2}>
                 <Row>
                   {badges.map((tag, i) => {
-                    return (
+                    return props.semNovo && tag === "Novo" ? (
+                      ""
+                    ) : (
                       <Badge
                         key={i}
                         variant={tag === "Novo" ? "success" : false}

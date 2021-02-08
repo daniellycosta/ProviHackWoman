@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login } from "../components/Login";
 import { Desafio } from "../components/Desafio";
+import { Candidato } from "../components/Candidato";
 import { Desafios } from "../components/Desafios";
 import { Candidatos } from "../components/Candidatos";
 import { Cadastro } from "../components/Cadastro";
@@ -11,6 +12,8 @@ import { MenuSuperior } from "../common/MenuSuperior";
 import { CadastroCandidato } from "../components/CadastroCandidato";
 import { Home } from "../components/Home";
 import { CadastroProjeto } from "../components/CadastroProjeto";
+import { TelaDeDesafio } from "../components/TelaDeDesafio";
+
 
 export function App() {
   return (
@@ -44,17 +47,18 @@ export function App() {
             <Desafio />
           </>
         </Route>
-
         <Route exact path="/cadastro-candidato">
           <CadastroCandidato />
         </Route>
         <Route path="/cadastro-empresa">
           <CadastroEmpresa />
         </Route>
-        <Route path="/cadastro-projeto">
-          <CadastroProjeto />
+        <Route path="/cadastro-projeto/:idDesafio/">
+          <>
+            <MenuSuperior />
+            <CadastroProjeto />
+          </>
         </Route>
-
         <Route exact path="/desafios">
           <>
             <MenuSuperior />
@@ -67,14 +71,19 @@ export function App() {
             <Candidatos />
           </>
         </Route>
+
         <Route path="/candidatos/:idCandidato">
           <>
             <MenuSuperior />
-            <Login />
+            <Candidato />
           </>
         </Route>
+
       </Switch>
+
     </Router>
+
+
   );
 }
 export default App;
