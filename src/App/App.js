@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Login } from "../components/Login";
-import { Desafio } from "../components/Desafio";
 import { Candidato } from "../components/Candidato";
 import { Desafios } from "../components/Desafios";
 import { Candidatos } from "../components/Candidatos";
@@ -13,7 +12,6 @@ import { CadastroCandidato } from "../components/CadastroCandidato";
 import { Home } from "../components/Home";
 import { CadastroProjeto } from "../components/CadastroProjeto";
 import { TelaDeDesafio } from "../components/TelaDeDesafio";
-
 
 export function App() {
   return (
@@ -28,7 +26,6 @@ export function App() {
         <Route exact path="/login">
           <Login />
         </Route>
-
         <Route exact path="/cadastro">
           <Cadastro />
         </Route>
@@ -44,7 +41,7 @@ export function App() {
         <Route path="/desafios/:idDesafio">
           <>
             <MenuSuperior />
-            <Desafio />
+            <TelaDeDesafio />
           </>
         </Route>
         <Route exact path="/cadastro-candidato">
@@ -78,12 +75,8 @@ export function App() {
             <Candidato />
           </>
         </Route>
-
       </Switch>
-
     </Router>
-
-
   );
 }
 export default App;

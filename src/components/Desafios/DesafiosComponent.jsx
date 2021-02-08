@@ -40,7 +40,7 @@ export const DesafiosComponent = (props) => {
               <Card
                 key={id}
                 onClick={() => {
-                  history.push(`/cadastro-projeto/${id}`);
+                  history.push(`/desafios/${id}`);
                 }}
                 dados={{
                   titulo,
