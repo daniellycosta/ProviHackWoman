@@ -1,10 +1,14 @@
-h1, h3, h4 {
-   color:  #8c719c;
-
-
+.titulos {
+  color: #8c719c;
 }
 
-.bt {
-    background-color: #8c719c;
-
+.button-enviar {
+  color: #48bfe3 !important;
+  background-color: transparent !important;
+  border-color: #48bfe3 !important;
+}
+.button-enviar:hover {
+  color: #ffff !important;
+  background-color: #48bfe3 !important;
+  border-color: #48bfe3 !important;
 }
