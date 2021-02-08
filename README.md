@@ -18,14 +18,14 @@ A TrampoTech é uma plataforma para auxiliar profissionais de início de carreir
    
    
 # Tecnologias:
--Javascrit
-   -React.js
-     -React Bootstrap
+- Javascrit
+   - React.js
+    - React Bootstrap
    
-   -Node.js
-     -Axios
-     -Mockapi
-     -Pravatar
+   - Node.js
+    - Axios
+    - Mockapi
+    - Pravatar
   
   
 
