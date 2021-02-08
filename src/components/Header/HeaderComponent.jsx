@@ -15,14 +15,6 @@
           />
           TrampoTech
         </Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Meus Desafios</Nav.Link>
-          <Nav.Link href="#pricing">Perfil</Nav.Link>
-        </Nav>
-        <Nav>
-          <Nav.Link href="/login">Login</Nav.Link>
-        </Nav>
       </Navbar>
     );
   };
