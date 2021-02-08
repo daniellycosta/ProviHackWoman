@@ -41,7 +41,7 @@ A TrampoTech é uma plataforma para auxiliar profissionais de início de carreir
  # UX:
   - Eli Alves Leandro
   
- # Análista de négocios em TI:
+ # Analista de négocios em TI:
   - Jéssica Pimentel
   
  # ADM - Dados:
