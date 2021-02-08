@@ -1,9 +1,5 @@
-.navbar {
-    background-color: #8c719c;
-  }
-  
-  .page {
-    width: 95vw;
-    height: 95vh;
-    background-color: beige;
-  }
+.page {
+  width: 95vw;
+  height: 95vh;
+  background-color: beige;
+}
